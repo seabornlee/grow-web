@@ -2,7 +2,7 @@
   <div id="app">
     <div>
       <mt-field placeholder="比如：瘦成一道闪电" v-model="title"></mt-field>
-      <mt-button type="default">+</mt-button>
+      <mt-button type="default" id="add" @click="toast">+</mt-button>
     </div>
     <mt-tabbar v-model="selected">
       <mt-tab-item id="tab1">
@@ -22,20 +22,26 @@
 </template>
 
 <script>
+import { Toast } from 'mint-ui';
+
 export default {
   name: 'app',
-  components: {
+  components: {},
+  methods: {
+    toast() {
+      Toast('Lets Rock!');
+    },
   },
 };
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
+  }
 </style>
