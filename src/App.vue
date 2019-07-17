@@ -1,5 +1,9 @@
 <template>
   <div id="app">
+    <div>
+      <mt-field placeholder="比如：瘦成一道闪电" v-model="title"></mt-field>
+      <mt-button type="default">+</mt-button>
+    </div>
     <mt-tabbar v-model="selected">
       <mt-tab-item id="tab1">
         <img slot="icon" src="./assets/logo.png">
