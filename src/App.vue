@@ -1,17 +1,26 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <mt-tabbar v-model="selected">
+      <mt-tab-item id="tab1">
+        <img slot="icon" src="./assets/logo.png">
+        目标
+      </mt-tab-item>
+      <mt-tab-item id="tab2">
+        <img slot="icon" src="./assets/logo.png">
+        广场
+      </mt-tab-item>
+      <mt-tab-item id="tab3">
+        <img slot="icon" src="./assets/logo.png">
+        我的
+      </mt-tab-item>
+    </mt-tabbar>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
-
 export default {
   name: 'app',
   components: {
-    HelloWorld,
   },
 };
 </script>
